@@ -10,11 +10,11 @@ import pandas as pd
 pd.options.plotting.backend = "plotly" 
 
 app = dash.Dash(__name__)
-data = pd.read_excel('kbo2020.xlsx') #  분석 결과 가져오기
-data = data.set_index(['팀명','선수명'])                    # 첫번째 컬럼을 로우 인덱스로 변경
+data = pd.read_excel('kbo2020.xlsx')
+data = data.set_index(['팀명','선수명'])
 
 app.layout = html.Div([
-    html.P("Type:"),
+    html.P("팀명:"),
     dcc.Dropdown(
         id="dropdown",
         options=[
