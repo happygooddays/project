@@ -11,7 +11,6 @@ pd.options.plotting.backend = "plotly"
 
 app = dash.Dash(__name__)
 data = pd.read_excel('kbo2020.xlsx')
-#data = data.set_index(['팀명','선수명'])
 data = data.set_index(['팀명'])
 app.layout = html.Div([
     html.P("팀명:"),
